@@ -1,15 +1,13 @@
-from bus_stop import BusStop
-
 class Bus:
-	def __init__(self, route_num, destination):
-		self.route_num = route_num
+	def __init__(self, route_number, destination):
+		self.route_number = route_number
 		self.destination = destination
 		self.passengers = []
 
 	def drive(self):
 		return "Brum brum"
 
-	def get_num_passengers(self):
+	def passenger_count(self):
 		return len(self.passengers)
 
 	def pick_up(self, passenger):
@@ -18,7 +16,7 @@ class Bus:
 	def drop_off(self, passenger):
 		self.passengers.remove(passenger)
 	
-	def empty(self):
+	def empty_bus(self):
 		self.passengers = []
 
 	def pick_up_from_stop(self, bus_stop):
